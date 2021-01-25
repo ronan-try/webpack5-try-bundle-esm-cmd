@@ -1,0 +1,26 @@
+{
+  "name": "webpack5-try-bundle-esm-cmd",
+  "version": "1.0.0",
+  "description": "分析webpack5打包文件代码，查看cmd、esm打包区别",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ronan-try/webpack5-try-bundle-esm-cmd.git"
+  },
+  "author": "Ronan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ronan-try/webpack5-try-bundle-esm-cmd/issues"
+  },
+  "homepage": "https://github.com/ronan-try/webpack5-try-bundle-esm-cmd#readme",
+  "devDependencies": {
+    "html-webpack-plugin": "^4.5.1",
+    "webpack": "^5.17.0",
+    "webpack-cli": "^4.4.0",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
