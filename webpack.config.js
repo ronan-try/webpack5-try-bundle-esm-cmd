@@ -1,12 +1,19 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = {
+  devtool: 'hidden-source-map', // 这个方式比较是个调研
   mode: 'development',
   // entry: './src/index.js',
   output: {
-    filename: 'build.js',
     path: path.resolve(__dirname, 'dist'),
+    filename: '[name].[chunkhash:8].js',
+    chunkFilename: '[name].[chunkhash:8].js'
+  },
+  optimization: {
+    usedExports: true,
   },
   // module: {
   //   rules: [
@@ -15,6 +22,8 @@ module.exports = {
   // },
   plugins: [
     new HtmlWebpackPlugin({ template: './src/index.html' }),
+    new CleanWebpackPlugin(),
+    new BundleAnalyzerPlugin(),
   ],
   // 开发服务器
   devServer: {
