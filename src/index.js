@@ -1,6 +1,3 @@
-import { test } from './test_esm/fullpath';
+import { test_debounce } from './test_lodash'
 
-console.log('index.js');
-console.log(test);
-
-console.log(1);
+console.log('main_test_debounce: ', test_debounce)
