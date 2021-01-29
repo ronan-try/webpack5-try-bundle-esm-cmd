@@ -9,5 +9,10 @@
 
 // ------------------------------------------------------
 
-import { will_be_use } from './test_cmd/test';
-console.log('will_be_use', '哈哈哈', will_be_use);
+// import { will_be_use } from './test_cmd/test';
+// console.log('will_be_use', '哈哈哈', will_be_use);
+
+
+// -----------------------------
+import { eeeeeeesm_will_be_use } from './test_esm'
+console.log('will_be_use', '哈哈哈', eeeeeeesm_will_be_use);

@@ -1,0 +1,6 @@
+{
+  "name": "test_esm",
+  "module": "main.js",
+  "sideEffects": false,
+  "type": "module"
+}
