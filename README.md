@@ -65,16 +65,15 @@
 >> `import debounce from 'lodash-es/debounce'`引入debounce文件&相关文件，没有`unused***`的标识，不会shaking掉       
 
 >> `import { debounce } from 'lodash-es'`     
+>> 🐮🐮🐮 webpack4 引入这个`lodash-es`文件，然后标记非`debounce`相关为`unused***`，后续可进行shading       
 
->>> 🐮🐮🐮 webpack4 引入这个`lodash-es`文件，然后标记非`debounce`相关为`unused***`，后续可进行shading       
+>> 🐮🐮🐮 webpack5 直接引入了`lodash-es/debounce`文件,        
 
->>> 🐮🐮🐮 webpack5 直接引入了`lodash-es/debounce`文件,        
+>>> 这就是巧妙之处`lodash-es`本身为文件夹，node根据文件夹下的`package.json`确认入口         
 
->>>> 这就是巧妙之处`lodash-es`本身为文件夹，node根据文件夹下的`package.json`确认入口         
+>>> 既可以用解构方式引入，也可以全路径引入
 
->>>> 既可以用解构方式引入，也可以全路径引入
-
->>>> 可以引发自己系统的import引入问题
+>>> 可以引发自己系统的import引入问题
 
 ---------------------------     
 
@@ -87,9 +86,9 @@
 ----------------------                  
 
 > `src/test_cmd/test.js`    
->> 这样用，不shaking     <br><img src="./log_imgs/webpack5_deal_cmd_0.png" width="999">       
+>> 这样用，不shaking     <br><img src="./log_imgs/webpack5_deal_cmd_1.png" width="999">       
 
->> 这样用，shaking  <br><img src="./log_imgs/webpack5_deal_cmd_1.png" width="999">        
+>> 这样用，shaking  <br><img src="./log_imgs/webpack5_deal_cmd_0.png" width="999">        
 
 >> 官方没有骗我，只是标题太诱人  <br><img src="./log_imgs/webpack5_deal_cmd_2.png" width="999"> 
 
