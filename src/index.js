@@ -4,8 +4,8 @@
 
 // -------------------------------------------------------
 
-// import { esm_will_be_use } from './test_esm/index'
-// console.log('哈哈哈', esm_will_be_use)
+import { esm_will_be_use } from './test_esm/index'
+console.log('哈哈哈', esm_will_be_use)
 
 // ------------------------------------------------------
 
@@ -13,6 +13,6 @@
 // console.log('will_be_use', '哈哈哈', will_be_use);
 
 
-// -----------------------------
-import { eeeeeeesm_will_be_use } from './test_esm'
-console.log('will_be_use', '哈哈哈', eeeeeeesm_will_be_use);
+// // -----------------------------
+// import { eeeeeeesm_will_be_use } from './test_esm'
+// console.log('will_be_use', '哈哈哈', eeeeeeesm_will_be_use);

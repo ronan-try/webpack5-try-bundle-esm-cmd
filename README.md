@@ -77,7 +77,7 @@
 
 ---------------------------     
 
-# 那么webpack5 对cmd的优化是骗人的？   自己写的esm方法呢， 自己写的commonjs方法呢，一会儿可以作为佐证实验一下
+## 那么webpack5 对cmd的优化是骗人的？   自己写的esm方法呢， 自己写的commonjs方法呢，一会儿可以作为佐证实验一下
 > `src/test_esm/index.js`      
 >> 这样用，先引入总包，再标记`unuse`,再shaking       <br><img src="./log_imgs/webpack5_esm_0.png" width="999">       
 
@@ -90,5 +90,12 @@
 
 >> 这样用，shaking  <br><img src="./log_imgs/webpack5_deal_cmd_0.png" width="999">        
 
->> 官方没有骗我，只是标题太诱人  <br><img src="./log_imgs/webpack5_deal_cmd_2.png" width="999"> 
+>> 官方没有骗我，只是标题太诱人  <br><img src="./log_imgs/webpack5_deal_cmd_2.png" width="999">    
+
+### 对比图
+<br><img src="./log_imgs/webpack5_esm_analyze_0.png" width="999">
+<br><img src="./log_imgs/webpack5_esm_analyze_1.png" width="999">
+
+
+
 
