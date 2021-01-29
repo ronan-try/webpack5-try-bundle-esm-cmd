@@ -55,7 +55,6 @@
 
 ## 来看一下
 > webpack5 & webpack4 对`commonjs`下的`all in` 和 `full path` 的打包文件的引入无太大差异
-
 >> `import { debounce } from 'lodash'` 引入整个lodash文件，没有`unused***`的标识，不会shaking掉      
 
 >> `import debounce from 'lodash/debounce'`引入debounce文件&相关文件，没有`unused***`的标识，不会shaking掉       
@@ -63,12 +62,13 @@
 ----------------------                  
 
 > webpack5 & webpack4 对`es Module`下的`all in` 和 `full path` 的打包文件的引入有点差别
+>> `import debounce from 'lodash-es/debounce'`引入debounce文件&相关文件，没有`unused***`的标识，不会shaking掉       
 
 >> `import { debounce } from 'lodash-es'`     
 
->>> webpack4 引入这个`lodash-es`文件，然后标记非`debounce`相关为`unused***`，后续可进行shading       
+>>> 🐮🐮🐮 webpack4 引入这个`lodash-es`文件，然后标记非`debounce`相关为`unused***`，后续可进行shading       
 
->>> webpack5 直接引入了`lodash-es/debounce`文件,        
+>>> 🐮🐮🐮 webpack5 直接引入了`lodash-es/debounce`文件,        
 
 >>>> 这就是巧妙之处`lodash-es`本身为文件夹，node根据文件夹下的`package.json`确认入口         
 
@@ -76,9 +76,7 @@
 
 >>>> 可以引发自己系统的import引入问题
 
->> `import debounce from 'lodash-es/debounce'`引入debounce文件&相关文件，没有`unused***`的标识，不会shaking掉       
-
-
+---------------------------     
 
 # 那么webpack5 对cmd的优化是骗人的？   自己写的esm方法呢， 自己写的commonjs方法呢，一会儿可以作为佐证实验一下
 > `src/test_esm/index.js`      
